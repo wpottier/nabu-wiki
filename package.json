@@ -1,0 +1,23 @@
+{
+    "name":         "DownWiki",
+    "version":      "0.0.1",
+    "private":      true,
+    "dependencies": {
+        "locomotive":           "0.4.x",
+        "bootable":             "0.2.x",
+        "bootable-environment": "0.2.x",
+        "express":              "3.x.x",
+        "connect-powered-by":   "0.1.x",
+        "jade":                 "~0.31.2",
+        "mongoose":             "3.8.8",
+        "mongoose-types":       "1.0.3",
+        "locomotive-mongoose":  "0.1.0",
+        "passport":             "0.2.0",
+        "passport-local":       "1.0.0",
+        "connect-ensure-login": "0.1.1",
+        "connect-mongodb":      "1.1.5"
+    },
+    "scripts":      {
+        "start": "node server.js"
+    }
+}

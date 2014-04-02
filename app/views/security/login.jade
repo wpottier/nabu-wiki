@@ -1,0 +1,26 @@
+extends ../root
+block body
+    div#login-page
+        div#container
+            form.form-login(action='/login', method='post')
+                h2.form-login-heading sign in now
+                div.login-wrap
+                    input.form-control(type='text', placeholder='User ID', autofocus)
+                    br
+                    input.form-control(type='password', placeholder='Password')
+                    label.checkbox
+                        input(type='checkbox', value='remember-me')
+                        | Remember me
+                        span.pull-right
+                            a(href='#modal-forgot-password', data-toggle='modal')
+
+                    button.btn.btn-theme.btn-block(type='submit')
+                        i.fa.fa-lock
+                        | SIGN IN
+
+                    hr
+
+                    div.registration
+                        | Don't have an account yet?
+                        br
+                        a(href='#') Create an account

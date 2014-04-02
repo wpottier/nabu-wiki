@@ -1,0 +1,19 @@
+extends root
+block body
+    section#container
+
+        aside
+            div#sidebar.nav-collapse
+                ul#nav-accordion.sidebar-menu
+                    p.centered
+                        a(href='#')
+                            img.img-circle(src='http://www.gravatar.com/avatar/00000000000000000000000000000000?d=mm', width=80)
+
+                    h5.centered John Doe
+
+                    li.mt
+                        a.active(href='#')
+                            i.fa.fa-dashboard
+                            | Dashboard
+
+        block content
