@@ -1,0 +1,31 @@
+extends ../root
+block body
+    div#login-page
+        div#container
+            form.form-login(action='/register', method='post')
+                input(type="hidden", name="_csrf", value=csrftoken)
+                h2.form-login-heading Create an account
+                div.login-wrap
+                    if form.fields.email.error
+                        p #{form.fields.email.error}
+                    input.form-control(type='email', placeholder='Email', name=form.fields.email.name, value=form.fields.email.value)
+                    br
+                    if form.fields.password.error
+                        p #{form.fields.password.error}
+                    input.form-control(type='password', placeholder='Password', name=form.fields.password.name)
+                    br
+                    if form.fields.email.error
+                        p #{form.fields.email.error}
+                    input.form-control(type='text', placeholder='Display Name', name=form.fields.displayName.name, value=form.fields.displayName.value)
+
+                    br
+                    button.btn.btn-theme.btn-block(type='submit')
+                        i.fa.fa-lock
+                        | REGISTER
+
+                    hr
+
+                    div.registration
+                        | Allready have an account yet?
+                        br
+                        a(href='/login') Try to sign in

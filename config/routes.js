@@ -9,9 +9,11 @@
 var passport = require('passport');
 
 module.exports = function routes() {
-  this.root('main#index');
+    this.root('main#index');
 
-  this.match('login', 'security#login', { via: 'get' });
-  this.match('login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }), { via: 'post' });
 
+
+    this.match('login', 'security#login', { via: 'get' });
+    this.match('login', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/login' }), { via: 'post' });
+    this.match('register', 'security#register', { via: ['get', 'post'] });
 };
